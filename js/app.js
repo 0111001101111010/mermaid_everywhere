@@ -2,7 +2,6 @@
 var map = L.map('largemap').setView([36.888168,-76.266884], 12);
 L.tileLayer(
   'http://{s}.sm.mapstack.stamen.com/(toner,$fff[@60],$178282[hsl-color])/{z}/{x}/{y}.png', {
-    attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
     maxZoom: 18,
     minZoom: 6,
   }).addTo(map);
@@ -33,18 +32,18 @@ $.getJSON(url, function(data) {
         });
       marker.on('click', function () {
         $('#infowindow').html('<div id="moreinfo-container">' +
+        '<img id ="bluedot" src="images/blue-dot.png" alt="mermaid" onClick="closeDiv()"/>'+
           '<div id="moreinfo"> ' +
             '<img src="images/thumb.png" alt="mermaid"/>' +
-            '<img src="images/blue-dot.png" alt="mermaid" onClick="closeDiv()"/>'+
             '<div class="info">' +
               '<h3 class="title">"' + feature.properties.name + '</h3>' +
               '<h3 class="artist-name">by Bess Decker</h3>' +
               '<h3 class="sponsor-label">Sponsor:</h3>' +
               '<h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>'+
-              '<div id="address-container">' +
+            '</div>' +
+            '<div id="address-container">' +
               '<h3 class="address">109 East Main St. Norfolk, VA 23510</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
               '</div>' +
-            '</div>' +
            '</div><!--/moreinfo-->' +
          '</div><!--/moreinfo-container-->'
          );

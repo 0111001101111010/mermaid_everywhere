@@ -1,7 +1,8 @@
 
   #largemap {
     height: 400px;
-    width: 100%
+    width: 100%;
+    z-index: 0;
   }
   .leaflet-sidebar > .leaflet-control h1 {
     font-size: 24pt;
