@@ -2,8 +2,8 @@
 var map = L.map('largemap').setView([36.888168,-76.266884], 12);
 L.tileLayer(
   'http://{s}.sm.mapstack.stamen.com/(toner,$fff[@60],$178282[hsl-color])/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    minZoom: 6,
+    maxZoom: 16,
+    minZoom: 12 ,
   }).addTo(map);
 
 var url = "mermaid.geojson";
