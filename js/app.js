@@ -31,10 +31,31 @@ $.getJSON(url, function(data) {
         marker.on('mouseout', function (e) {
             this.closePopup();
         });
-      // marker.on('click', function () {
-      //   console.log("showing",  feature.properties.name);
-      // });
+      marker.on('click', function () {
+        $('#infowindow').html('<div id="moreinfo-container">' +
+          '<div id="moreinfo"> ' +
+            '<img src="images/thumb.png" alt="mermaid"/>' +
+            '<img src="images/blue-dot.png" alt="mermaid" onClick="closeDiv()"/>'+
+            '<div class="info">' +
+              '<h3 class="title">"' + feature.properties.name + '</h3>' +
+              '<h3 class="artist-name">by Bess Decker</h3>' +
+              '<h3 class="sponsor-label">Sponsor:</h3>' +
+              '<h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>'+
+              '<div id="address-container">' +
+              '<h3 class="address">109 East Main St. Norfolk, VA 23510</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
+              '</div>' +
+            '</div>' +
+           '</div><!--/moreinfo-->' +
+         '</div><!--/moreinfo-container-->'
+         );
+        console.log("showing",  feature.properties.name);
+      });
+
       return marker;
     }
   }).addTo(map);
 });
+
+function closeDiv(argument) {
+    $('#moreinfo-container').remove();
+}

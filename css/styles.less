@@ -71,24 +71,24 @@ body {
 	padding: 0;
 	background: #fafafa;
 	font-family: @body-font;
-	
+
 	wrapper {
 		width: 100%;
 		margin: 0 auto;
 		padding-bottom: 3em;
 		display: block;
-		
+
 		header {
 			height: 3.5em;
 			width: 100%;
 			background: #72b082;
 			border-bottom: 1px solid #ddd;
-			
+
 			#search {
 				width: 90%;
 				margin: 0 auto;
 				padding: .5em;
-				
+
 				#search-box {
 					-webkit-border-top-left-radius: 5px;
 					-moz-border-radius-topleft: 5px;
@@ -108,36 +108,42 @@ body {
 				}
 			}/*search*/
 		}/*header*/
-				
+
 		#moreinfo-container {
 			background: #d4d4d4;
 			width: 100%;
-	
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 10;
+			height: 100px;
+
 			#moreinfo {
 				width: 90%;
 				margin: 0 auto;
 				padding: 1em 0;
-	
+
 				img {
 					display: inline-block;
 					vertical-align: top;
 					margin: 0 .5em 0 0;
 				}
-		
+
 				.info {
 					margin-bottom: 1.5em;
 					width: 50%;
 					display: inline-block;
-					
+
 					h3.title {
 						font-weight: 700;
 					}
-			
+
 					h3.artist-name {
 						margin-bottom: .7em;
 					}
 				}/*info*/
-				
+
 				#address-container {
 					.address {
 						display: inline-block;
@@ -149,17 +155,16 @@ body {
 						vertical-align: top;
 					}
 				}/*address-container*/
-	
+
 			}/*moreinfo*/
-		}/*moreinfo-container*/		
-				
+		}/*moreinfo-container*/
+
 		h3 {
 			font-size: .9em;
 			font-weight: 400;
 			color: @text-color;
 			margin: 0;
 		}/*h3*/
-	
+
 	}/*wrapper*/
 }/*body*/
-
