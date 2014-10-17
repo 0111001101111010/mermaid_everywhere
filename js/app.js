@@ -41,10 +41,10 @@ $.getJSON(url, function(data) {
               '<h3 class="title">' + feature.properties.name + '</h3>' +
               '<h3 class="artist-name">'+ feature.properties.artist +'</h3>' +
               '<h3 class="sponsor-label">Sponsor:</h3>' +
-              '<h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>'+
+              '<h3 class="sponsor-name">'+ feature.properties.sponsor+ '</h3>'+
             '</div>' +
             '<div id="address-container">' +
-              '<h3 class="address">109 East Main St. Norfolk, VA 23510</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
+              '<h3 class="address">'+ feature.properties.address+ '</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
               '</div>' +
            '</div><!--/moreinfo-->' +
          '</div><!--/moreinfo-container-->'
