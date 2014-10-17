@@ -1,5 +1,5 @@
 // initialize the map
-var map = L.map('largemap').setView([36.888168,-76.266884], 12);
+var map = L.map('largemap').setView([36.854759,-76.240463], 12);
 L.tileLayer(
   'http://{s}.sm.mapstack.stamen.com/(toner,$fff[@60],$178282[hsl-color])/{z}/{x}/{y}.png', {
     maxZoom: 16,
@@ -7,6 +7,7 @@ L.tileLayer(
   }).addTo(map);
 
 var url = "mermaid.geojson";
+map.scrollWheelZoom.disable();
 
  // load GeoJSON from an external file
 $.getJSON(url, function(data) {
@@ -37,12 +38,12 @@ $.getJSON(url, function(data) {
             '<img src="images/thumb.png" alt="mermaid"/>' +
             '<div class="info">' +
               '<h3 class="title">"' + feature.properties.name + '</h3>' +
-              '<h3 class="artist-name">by Bess Decker</h3>' +
+              '<h3 class="artist-name">' +  feature.properties.artist + '</h3>' +
               '<h3 class="sponsor-label">Sponsor:</h3>' +
-              '<h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>'+
+              '<h3 class="sponsor-name">' +  feature.properties.sponsor + ' </h3>'+
             '</div>' +
             '<div id="address-container">' +
-              '<h3 class="address">109 East Main St. Norfolk, VA 23510</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
+              '<h3 class="' +  feature.properties.address + '>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
               '</div>' +
            '</div><!--/moreinfo-->' +
          '</div><!--/moreinfo-container-->'
