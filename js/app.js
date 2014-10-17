@@ -25,6 +25,15 @@ $.getJSON(url, function(data) {
       });
       console.log(feature);
       marker.bindPopup('<b>' + '<font size="3">' + feature.properties.name + '</font>' + '</b>' + '<br/>' + feature.properties.address);
+           marker.on('mouseover', function (e) {
+            this.openPopup();
+        });
+        marker.on('mouseout', function (e) {
+            this.closePopup();
+        });
+      // marker.on('click', function () {
+      //   console.log("showing",  feature.properties.name);
+      // });
       return marker;
     }
   }).addTo(map);
