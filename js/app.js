@@ -7,6 +7,7 @@ L.tileLayer(
   }).addTo(map);
 
 var url = "mermaid.geojson";
+
 map.scrollWheelZoom.disable();
 
  // load GeoJSON from an external file
@@ -37,13 +38,13 @@ $.getJSON(url, function(data) {
           '<div id="moreinfo"> ' +
             '<img src="images/thumb.png" alt="mermaid"/>' +
             '<div class="info">' +
-              '<h3 class="title">"' + feature.properties.name + '</h3>' +
-              '<h3 class="artist-name">' +  feature.properties.artist + '</h3>' +
+              '<h3 class="title">' + feature.properties.name + '</h3>' +
+              '<h3 class="artist-name">'+ feature.properties.artist +'</h3>' +
               '<h3 class="sponsor-label">Sponsor:</h3>' +
-              '<h3 class="sponsor-name">' +  feature.properties.sponsor + ' </h3>'+
+              '<h3 class="sponsor-name">Decker, Cardon, Weintraub and Neskis</h3>'+
             '</div>' +
             '<div id="address-container">' +
-              '<h3 class="' +  feature.properties.address + '>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
+              '<h3 class="address">109 East Main St. Norfolk, VA 23510</h3>'+            '<input id="directionbutton" type="submit" value="Directions" />'+
               '</div>' +
            '</div><!--/moreinfo-->' +
          '</div><!--/moreinfo-container-->'
