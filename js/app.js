@@ -24,7 +24,6 @@ $.getJSON(url, function(data) {
       var marker = L.marker(latlng, {
         icon: ratIcon
       });
-      console.log(feature);
       marker.bindPopup('<b>' + '<font size="3">' + feature.properties.name + '</font>' + '</b>' + '<br/>' + feature.properties.address);
            marker.on('mouseover', function (e) {
             this.openPopup();
