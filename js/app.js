@@ -44,7 +44,7 @@ $.getJSON(url, function(data) {
               '<h3 class="sponsor-name">'+ feature.properties.sponsor+ '</h3>'+
             '</div>' +
             '<div id="address-container">' +
-              '<h3 class="address">'+ feature.properties.address+ '</h3>'+            '<a href="http://maps.google.com/?saddr=Current%20Location&daddr='+ escape(feature.properties.address)+'"><input id="directionbutton" type="submit" value="Directions" /></a>'+
+              '<h3 class="address">'+ feature.properties.address+ '</h3>'+            '<a href target="_blank" ="http://maps.google.com/?saddr=Current%20Location&daddr='+ escape(feature.properties.address)+'"><input id="directionbutton" type="submit" value="Directions" /></a>'+
               '</div>' +
            '</div><!--/moreinfo-->' +
          '</div><!--/moreinfo-container-->'
