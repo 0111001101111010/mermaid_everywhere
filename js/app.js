@@ -34,7 +34,7 @@ $.getJSON(url, function(data) {
         });
       marker.on('click', function () {
         $('#infowindow').html('<div id="moreinfo-container">' +
-        '<img id ="bluedot" src="images/blue-dot.png" alt="mermaid" onClick="closeDiv()"/>'+
+        '<img id ="closebtn" src="images/closebtn.png" alt="mermaid" onClick="closeDiv()"/>'+
           '<div id="moreinfo"> ' +
             '<img src="images/thumb.png" alt="mermaid"/>' +
             '<div class="info">' +
